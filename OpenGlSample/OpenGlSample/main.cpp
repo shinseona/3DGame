@@ -6,7 +6,7 @@
 #include "Renderer.h"
 #include "Sphere.h"
 #include "UserObject.h"
-
+#include "NonRenderObject.h"
 
 int main()
 {
@@ -30,13 +30,14 @@ int main()
 		glm::vec3(0, 0, 0), // and looks at the origin
 		glm::vec3(0, -1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
 	));
-
+	NonRenderObject* non_render_obj = new NonRenderObject();
 	do
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		renderer->draw(cube);
 		renderer->draw(sphere);
+		renderer->Update(non_render_obj);
 		glfwSwapBuffers(renderer->GetWindow());
 		glfwPollEvents();
 

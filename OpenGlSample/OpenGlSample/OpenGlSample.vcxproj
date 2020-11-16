@@ -368,6 +368,7 @@
     <ClInclude Include="include\GL\glxew.h" />
     <ClInclude Include="include\GL\wglew.h" />
     <ClInclude Include="IUpUdate.h" />
+    <ClInclude Include="NonRenderObject.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="RenderObject.h" />
@@ -514,6 +515,7 @@
   <ItemGroup>
     <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NonRenderObject.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="RenderObject.cpp" />
